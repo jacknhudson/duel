@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h2>Register</h2>
+    <p style="text-align: center; color: #ecf0f1; margin-bottom: 20px;">Please sign in so we can store your responses on your account.</p>
+    <form method="post" action="/signIn">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <input type="email" id="email" name="email" maxlength="150" placeholder="Email Address" style="text-align: center;" onkeyup="validateEmail();" autofocus>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <input type="password" id="password" name="password" maxlength="50" style="text-align: center;" onkeyup="validatePassword();" placeholder="Password (min 5 chars)">
+    </div>
+    </form>
+    <br><br>
+    <p id="directions">Press Enter to submit</p>
+  </div>
+</div>
+</body>
+<script src="/register.js"></script>
+</html>
