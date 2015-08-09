@@ -1,18 +1,34 @@
+@font-face {
+    font-family:"Aller_Rg";
+    src: url("Aller_Rg.ttf")
+}
+body{font-family: 'Lato', sans-serif;}
+::-moz-selection{color:#2c3e50;text-shadow:none;background-color: transparent;}
+::selection{color:#2c3e50;text-shadow:none;background-color: transparent;}
+::-webkit-input-placeholder{color:rgba(44, 62, 80,0.6);}
+:-moz-placeholder{color:rgba(44, 62, 80,0.6);}
+::-moz-placeholder{color:rgba(44, 62, 80,0.6);}
+:-ms-input-placeholder{color:rgba(44, 62, 80,0.6);}
 .jumbotron {
-  background: #532F8C;
+  background: #8e44ad;
   color: white;
-  padding-bottom: 80px; }
+  margin-bottom: 0px;
+  /*padding-bottom: 80px;*/
+  height:100vh; }
+  .jumbotron h2{padding-top: 40px;}
   .jumbotron .btn-primary {
     background: #845ac7;
     border-color: #845ac7; }
     .jumbotron .btn-primary:hover {
       background: #7646c1; }
   .jumbotron p {
-    color: #d9ccee;
+    text-align:right; 
+    color: rgba(44, 62, 80,0.6);
     max-width: 75%;
     margin: 1em auto 2em; }
   .navbar + .jumbotron {
-    margin-top: -20px; }
+    margin-top: -20px; 
+  }
   .jumbotron .lang-logo {
     display: block;
     background: #B01302;
@@ -24,4 +40,9 @@
     border: 2px solid white; }
     .jumbotron .lang-logo img {
       max-width: 100%; }
+  .jumbotron textarea{height: 30vh; width: 75vw; color: #d9ccee; background-color: transparent; border: none; outline: none; font-size: 20pt; resize: none;}
+.navbar{background: #8e44ad; font-size: 30px;}
+.navbar a{color: #ecf0f1; background: #8e44ad;}
+.nav>li>a:focus, .nav>li>a:hover{background: transparent;}
+
 

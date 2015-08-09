@@ -10,16 +10,27 @@
 
 <div class="jumbotron text-center">
   <div class="container">
-    <a href="/" class="lang-logo">
+    <!-- <a href="/" class="lang-logo">
       <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+    </a> -->
+    <h2>Would you rather live in one place forever or change locations every month?</h2>
+    <script type="text/javascript">
+    function submission () {
+      event.preventDefault();
+      // $("form").submit();
+      alert("This is as far as I've got...");
+    }
+    </script>
+    <form role="form" method="post" action="/register_user/">
+    <textarea id="response" maxlength="140" placeholder="Response..." onkeypress="if (event.which == 13) {submission();}" autofocus></textarea>
+    </form>
+    <p>Press Enter to submit</p>
+    <!-- <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p> -->
+    <!-- <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a> -->
+    <!-- <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a> -->
   </div>
 </div>
-<div class="container">
+<!-- <div class="container">
   <div class="alert alert-info text-center" role="alert">
     To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
   </div>
@@ -45,12 +56,10 @@
         <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
       </ul>
     </div>
-  </div> <!-- row -->
+  </div>
    <div class="alert alert-info text-center" role="alert">
     Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
   </div>
-</div>
-
-
+</div> -->
 </body>
 </html>
