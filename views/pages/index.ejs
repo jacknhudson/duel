@@ -13,18 +13,49 @@
     <!-- <a href="/" class="lang-logo">
       <img src="/lang-logo.png">
     </a> -->
-    <h2>Would you rather live in one place forever or change locations every month?</h2>
     <script type="text/javascript">
+    $(window).load(function(){
+      console.log("T");
+      selectRandomQuestion();
+    });
+    // window.onload = function() {
+    //   selectRandomQuestion();
+    // };
+    </script>
+    <h2 id="question" index="">Question</h2>
+    <script type="text/javascript">
+    function keyhandler (argument) {
+      if (event.which == 13) {submission();}
+      // else if (event.which == 9) {
+      //   console.log("T2");
+      //   skip();
+      // }
+      if (document.getElementById("response").innerHTML.length) {
+        document.getElementById("directions").innerHTML = "Press Enter to skip"
+      }
+      else {
+        document.getElementById("directions").innerHTML = "Press Enter to submit"
+      }
+    }
     function submission () {
       event.preventDefault();
-      // $("form").submit();
-      alert("This is as far as I've got...");
+      if (document.getElementById("response").value.length == 0) {
+        document.location = "/";
+      }
+      else {
+        $("form").submit();
+      }
+    }
+    function skip () {
+      event.preventDefault();
+      document.location = "/";
     }
     </script>
-    <form role="form" method="post" action="/register_user/">
-    <textarea id="response" maxlength="140" placeholder="Response..." onkeypress="if (event.which == 13) {submission();}" autofocus></textarea>
+    <form method="post" action="/submitResponse">
+    <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeypress="keyhandler();" autofocus></textarea>
+    <input type="hidden" id="question_id" name="question_id" value="-1">
     </form>
-    <p>Press Enter to submit</p>
+    <p id="directions">Press Enter to skip</p>
     <!-- <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p> -->
     <!-- <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a> -->
     <!-- <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a> -->

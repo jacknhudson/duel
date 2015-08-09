@@ -1,18 +1,16 @@
-# node-js-getting-started
+# Rocket
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
-
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/jacknhudson/Rocket.git # or clone your own fork
+$ cd rocket
 $ npm install
-$ npm start
+$ npm start # or foreman start, or foreman start web
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
@@ -20,10 +18,27 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 ## Deploying to Heroku
 
 ```
-$ heroku create
+$ heroku git:remote -a rqt
 $ git push heroku master
 $ heroku open
 ```
+
+## Setting up local database
+
+```
+which psql # Checks version/existence of psql
+export DATABASE_URL=postgres:///<Username>
+psql <Username>
+(In psql shell:) 
+create table responses (user_id integer, question_id integer, response text);
+\q
+```
+
+After this, run `foreman start` and you should be good to go!
+
+Note: You may need to download the Postgres software which can be found at the reference link below.
+
+Reference: [https://devcenter.heroku.com/articles/heroku-postgresql#local-setup](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)
 
 ## Documentation
 
