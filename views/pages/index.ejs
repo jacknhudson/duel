@@ -7,14 +7,13 @@
 <body>
 
   <% include ../partials/nav.ejs %>
-
+<script type="text/javascript">
+  $(window).load(function(){
+    selectRandomQuestion();
+  });
+</script> 
 <div class="jumbotron text-center">
   <div class="container">
-    <script type="text/javascript">
-    $(window).load(function(){
-      selectRandomQuestion();
-    });
-    </script>
     <h2 id="question" index="">Question</h2>
     <form method="post" action="/submitResponse">
     <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
