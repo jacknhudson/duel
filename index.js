@@ -45,7 +45,6 @@ app.post('/submitResponse', function(req, res) {
         }
         else { 
           res.redirect("/");
-          // res.send('You sent the response "' + response + '".');
         }
       });
   });

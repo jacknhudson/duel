@@ -16,8 +16,6 @@ Which is your favorite part of the human face and why?
 What makes you bored?
 Which is your favorite four legged creature and why?
 Do you like spicy food and why?
-
-
 Do you remember anything about your favorite teacher?
 Which are your 2 favorite careers and why?
 Which is the hardest thing you ever had to do?
