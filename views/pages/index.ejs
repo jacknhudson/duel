@@ -14,7 +14,12 @@
     <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
     <input type="hidden" id="question_id" name="question_id" value="-1">
     </form>
-    <p id="directions">Press Enter to skip</p>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <p style="text-align: left"><span id="charCount">0</span>/140</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <p id="directions">Press Enter to skip</p>
+    </div>
   </div>
 </div>
 </body>

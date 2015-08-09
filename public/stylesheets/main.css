@@ -40,7 +40,7 @@ body{font-family: 'Lato', sans-serif;}
     .jumbotron .lang-logo img {
       max-width: 100%; }
   .jumbotron textarea{height: 30vh; width: 75vw; color: #d9ccee; background-color: transparent; border: none; outline: none; font-size: 20pt; resize: none;}
-.navbar{background: #8e44ad; font-size: 30px;}
+.navbar{background: #8e44ad; font-size: 30px; font-family: 'Aller_Rg', sans-serif;}
 .navbar a{color: #ecf0f1; background: #8e44ad;}
 .nav>li>a:focus, .nav>li>a:hover{background: transparent;}
 
