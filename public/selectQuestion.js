@@ -23,6 +23,8 @@ function submission () {
     document.location = "/";
   }
   else {
+  	var ls = localStorage.getItem('rqt_user_id');
+  	document.getElementById("user_id").setAttribute("value", ls);
     $("form").submit();
   }
 }

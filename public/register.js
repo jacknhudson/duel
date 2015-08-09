@@ -1,29 +1,61 @@
-function validateEmail () {
-  var enteredEmail = document.getElementById("email").value
-  if (enteredEmail.length >= 1) {
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    if (re.test(enteredEmail)) {
-      document.getElementById("email").style.color = '#ecf0f1';
-    }
-    else {
-      document.getElementById("email").style.color = '#2c3e50';
-    }
-  }
+function isEmail (email) {
+  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+  return re.test(email);
 }
 
-function validatePassword (argument) {
-  var enteredPassword = document.getElementById("password").value
-  if (enteredPassword.length >= 5) {
-    document.getElementById("password").style.color = '#ecf0f1';
+function isPassword (password) {
+  return password.length >= 5;
+}
+
+function validateEmail (arg) {
+  if (event.which == 13) {
+    validateBoth(arg);
   }
   else {
-    document.getElementById("password").style.color = '#2c3e50';
+    var enteredEmail = document.getElementById("email").value
+    if (enteredEmail.length >= 1) {
+      if (isEmail(enteredEmail)) {
+        document.getElementById("email").style.color = '#ecf0f1';
+      }
+      else {
+        document.getElementById("email").style.color = '#2c3e50';
+      }
+    }
   }
 }
 
-function shake(e, oncomplete, distance, time) {
+function validateBoth (arg) {
+  var enteredEmail = document.getElementById("email").value
+  var enteredPassword = document.getElementById("password").value
+  var goodEmail = isEmail(enteredEmail);
+  var goodPass = isPassword(enteredPassword);
+  if (goodEmail && goodPass) {
+    $("form").submit();
+  }
+  else {
+    if (!goodEmail) shake("email");
+    if (!goodPass) shake("password");
+  }
+}
+
+function validatePassword (arg) {
+  if (event.which == 13) {
+    validateBoth(arg);
+  }
+  else {
+    var enteredPassword = document.getElementById("password").value
+    if (isPassword(enteredPassword)) {
+      document.getElementById("password").style.color = '#ecf0f1';
+    }
+    else {
+      document.getElementById("password").style.color = '#2c3e50';
+    }
+  }
+}
+
+function shake (str, oncomplete, distance, time) {
     // Handle arguments
-    if (typeof e === "string") e = document.getElementById(e);
+    var e = document.getElementById(str);
     if (!time) time = 300;
     if (!distance) distance = 5;
 

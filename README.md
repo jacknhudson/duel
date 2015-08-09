@@ -30,7 +30,8 @@ which psql # Checks version/existence of psql
 export DATABASE_URL=postgres:///<Username>
 psql <Username>
 (In psql shell:) 
-create table responses (user_id integer, question_id integer, response text);
+create table responses (user_id text, question_id integer, response text);
+create table users (id text, email text, encrypted_password text);
 \q
 ```
 
