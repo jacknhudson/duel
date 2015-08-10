@@ -45,6 +45,32 @@ app.get('/register', function(req, res) {
   res.render('pages/register', {errorMsg: ""} );
 });
 
+app.get('/account', function(req, res) {
+  var user_id = req.query.user_id;
+  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM responses WHERE user_id=\'' + user_id + '\';', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); res.send("Error " + err); }
+      else { 
+      	var qids = []
+      	for (var i = 0; i < result.rows.length; i++) {
+      		qids.push(result.rows[i].question_id);
+      	};
+      	client.query('SELECT * FROM users WHERE id=\'' + user_id + '\';', function(err1, result1) {
+	      done();
+	      if (err)
+	       { console.error(err1); res.send("Error " + err1); }
+	      else {
+	       	res.render('pages/account', {questions: result.rows, qids: qids, user: result1.rows[0]} ); 
+	       }
+	    });
+      }
+    });
+    // res.render('pages/account', {user_id: user_id});
+  });
+});
+
 app.get('/db', function (req, res) {
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     client.query('SELECT * FROM user', function(err, result) {

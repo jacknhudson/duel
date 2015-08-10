@@ -11,16 +11,17 @@
   <div class="container">
     <h2>Register</h2>
     <% if (errorMsg) { %>
-    <p style="text-align: center; color: #2c3e50; margin-bottom: 20px;"><%= errorMsg  %></p>
+    <span class="message"><%= errorMsg  %></span>
     <% } else { %>
-    <p style="text-align: center; color: #ecf0f1; margin-bottom: 20px;">Please sign in so we can store your responses on your account.</p>
+    <span class="message" style="color: #ecf0f1;">Please sign in so we can store your responses on your account.</span>
     <% }; %>
+    <br><br>
     <form method="post" action="/please_register">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <input type="email" id="email" name="email" maxlength="150" placeholder="Email Address" style="text-align: center;" onkeydown="validateEmail(this);" autofocus>
+      <input type="email" id="email" name="email" maxlength="150" placeholder="Email Address" class="centered" onkeydown="validateEmail(this);" autofocus>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <input type="password" id="password" name="password" maxlength="50" style="text-align: center;" onkeydown="validatePassword(this);" placeholder="Password (min 5 chars)">
+      <input type="password" id="password" name="password" maxlength="50" class="centered" onkeydown="validatePassword(this);" placeholder="Password (min 5 chars)">
     </div>
     <input type="hidden" id="question_id" name="question_id" value="<%= question_id  %>">
     <input type="hidden" id="response" name="response" value="<%= response  %>">

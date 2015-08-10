@@ -31,7 +31,7 @@
     selectRandomQuestion();
     if (user_id.length >= 5) {
       document.getElementById("account").innerHTML = "My Account";
-      document.getElementById("account").href="/"; 
+      document.getElementById("account").href="/account?user_id="+user_id; 
       localStorage.setItem('rqt_user_id', user_id);
     }
   });
