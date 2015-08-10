@@ -237,3 +237,9 @@ app.post('/please_register', function(req, res) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+//The 404 Route
+app.get('*', function(req, res){
+  res.render('pages/404');
+  // res.send('what???', 404);
+});
