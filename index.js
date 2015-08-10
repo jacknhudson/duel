@@ -47,6 +47,9 @@ app.get('/register', function(req, res) {
 
 app.get('/account', function(req, res) {
   var user_id = req.query.user_id;
+  if (user_id == null) {
+  	res.render('pages/404');
+  }
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     client.query('SELECT * FROM responses WHERE user_id=\'' + user_id + '\';', function(err, result) {
       done();
