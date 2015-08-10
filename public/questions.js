@@ -33,14 +33,14 @@ Which form of public transport do you prefer, and why?
 What talents do you have?
 What has been your favorite holiday, and why?
 Where would your dream holiday be?
-Whats your favourite zoo animal, and why?
-Whats your favourite sport, and why?
-Whats your favourite food, and why?
-Whats your favourite film, and why?
-Whats your favourite song, and why?
-Whats your favourite thing to drink, and why?
-Whats your favourite TV show, and why?
-Whats your favourite musical artist, and why?
+Whats your favorite zoo animal, and why?
+Whats your favorite sport, and why?
+Whats your favorite food, and why?
+Whats your favorite film, and why?
+Whats your favorite song, and why?
+Whats your favorite thing to drink, and why?
+Whats your favorite TV show, and why?
+Whats your favorite musical artist, and why?
 What qualities would you your ideal partner have?
 If you could go back in time to change one thing what would it be?
 Have you ever been admitted to hospital? If so, why?
@@ -59,9 +59,9 @@ What is your favorite thing to have for breakfast?
 What is your favorite thing to have for dinner?
 Have you ever been in a newspaper. If so, why?
 How long can you balance on one foot with your eyes closed? (Try it!)
-Whats your favourite condement, and why?
-Whats your favourite word, and why?
-Whats your least favourite word, and why?
+Whats your favorite condement, and why?
+Whats your favorite word, and why?
+Whats your least favorite word, and why?
 What sport teams do you support (if any), and why?
 Whats the longest you've gone without sleep, and why?
 Whats the tallest building you've ever been up?
@@ -71,22 +71,22 @@ What is the first job that you wanted to have when you were younger?
 If you could change anything about yourself what would it be?
 If you could ask your future self one question what would it be?
 Whats the most unusual conversation you've ever had?
-Whats your favourite joke?
+Whats your favorite joke?
 Whats been your best present?
 Whats been your worst present?
 Can you build a house of cards? (Try it!)
-Whats your favourite TV commercial?
+Whats your favorite TV commercial?
 What is your favorite thing to cook?
 What would be your dream sandwich?
-Whats your favourite accent?
-Whats your favourite saying?
+Whats your favorite accent?
+Whats your favorite saying?
 Who do you look up to the most, and why?
 What has been your favotie halloween costume that you've worn?
 Whats your most expensive piece of clothing, and where is it from?
 Whats your favorite piece of clothing, and where is it from?
 Whats the last thing you took a picture of?
 Whats the coolest thing you took a picture of?
-What has been your favourite birthday?
+What has been your favorite birthday?
 Can you roll your tounge? (Try it!)
 What is your favorite book, and why?
 What is your favorite song to dance to, and why?
@@ -94,11 +94,11 @@ Have you ever accidentally injured anyone. If so, how?
 If you could learn any language fluently what would it be?
 What historical figure would you love to see in 21st centuary life?
 What is your favorite thing to do in your free time?
-Whats your favourite type of foreign food?
+Whats your favorite type of foreign food?
 Which foreign country do you like the most, and why?
-Whats your favourite animated or cartoon program?
+Whats your favorite animated or cartoon program?
 Jelly or Ice Cream, and why?
-Whats your favourite type of pie?
+Whats your favorite type of pie?
 Whats your most used phrase?
 Whats your most used word?
 Who would you want to play you in a movie of your life?
@@ -108,7 +108,7 @@ What do you think the greatest invention has been?
 If you could go back in time and claim one invention, what would it be?
 Do you have any lucky items, objects or traditions. If so, what?
 Do you have any superstitions. If so, what?
-Whats your favourite movie quote?
+Whats your favorite movie quote?
 What animal would you most like to have as a pet?
 If you could befriend one animal, what would it be and why?
 If you were given $1 million, what would you do with it?
@@ -124,10 +124,10 @@ Have you ever invented a fairly unique meal or drink? If so, what?
 What has been your favorite accomplishment?
 Whats the cleverest word you know?
 Invent a word that doesn't exit and a definition for it:
-Who's your favourite Superhero, and why?
-Who's your favourite Villain, and why?
+Who's your favorite Superhero, and why?
+Who's your favorite Villain, and why?
 If you could tell a crowd of people one thing, what would you tell them?
-Whats your favourite fruit, and why?
+Whats your favorite fruit, and why?
 If a tree falls in the forest and there's no one around to hear it does it make a noise?
 What came first, the chicken or the egg, and why?
 If you could have one thing named after you, what would it be?
@@ -137,11 +137,11 @@ Do you have any unusual fears or phobias? If so, what?
 Do you live by any motto or philosophy? If so, what?
 Whats the most unusual name you've ever come across?
 What is your favorite comic, and why?
-What was your favourite class in school, and why?
-What was your least favourite class in school, and why?
+What was your favorite class in school, and why?
+What was your least favorite class in school, and why?
 What is the most embarassing question that you've ever asked?
 Whats the most unusual thing you've ever eaten?
-Who's your favourite movie action hero?
+Who's your favorite movie action hero?
 Do you collect anything? If so, what and why?
 Is there anything you wished would come back into fashion?
 If you could have any feature from an animal what would you want?
@@ -174,7 +174,7 @@ If you were exiled what country would you choose as your new home?
 If you could have a full scholarship to any university, where would you go and what would you choose to study?
 Whats been your greatest day ever, and why?
 What historical period would you like to live in if you could go back in time?
-Whats your favourite childrens story, and why?
+Whats your favorite childrens story, and why?
 What movie ending really frustrated you? And how would you change it?
 What three things do you think of most each day?
 What is your favorite meal of the day and why?
@@ -183,9 +183,9 @@ If you were a fashion designer, what style of clothing or accessories would you 
 What song would you say best sums you up?
 Who is your best friend, and why are they your best friend?
 What three things do you value in a person?
-Whats your favourite farmyard animal, and why?
+Whats your favorite farmyard animal, and why?
 If you could choose one celebrity to be the father/mother of your child who would it be?
-What are your 3 favourite website?
+What are your 3 favorite website?
 What mobile app do you use the most?
 What website do you use the most?
 Which fictional character do you wish was real, and why?
@@ -230,7 +230,7 @@ If you had an autobiography, what you call it?
 If you could join any music group which would you want to join?
 If you could replace one bodypart with a super bionic replacement what bodypart and what features would the new bionic replacement have?
 Have you ever done something in front of a large audience? If so, what?
-Whats your favourite personality trait you like about yourself?
+Whats your favorite personality trait you like about yourself?
 What is one quirk that you inherited from your parents?
 If you met a Genie who offered you three wishes, what would you wish for? (more wishes does not count)
 Whats the scariest thing you've ever done?
@@ -239,6 +239,6 @@ If you ruled your own country, who would you get to writer your national anthem?
 Whats the craziest thing you've ever done for someone?
 How did you get your name?
 Whats the best piece of advice anyone has ever given you?
-If you had to describe yourself as a flavour, what would it be?
+If you had to describe yourself as a flavor, what would it be?
 If you had to describe yourself as a car, what would it be?
 If you had to describe yourself as an animal, what would it be?""".split("\n")
