@@ -6,7 +6,7 @@
 
 <body>
 
-  <% include ../partials/nav.ejs %>
+  <% include ../partials/nav-account.ejs %>
 <div class="jumbotron text-center">
   <div class="container">
     <h2 style="padding-top: 0px;margin-top:0px;">My Responses</h2><hr style="width: 300px;">
@@ -28,8 +28,6 @@
     for (var i = 0; i < qidArray.length; i++) {
       document.getElementById(qidArray[i]).innerHTML = questions[qidArray[i]];
     };
-    document.getElementById("account").innerHTML = "Questions";
-    document.getElementById("account").href="/"; 
   });
 </script> 
 </html>
