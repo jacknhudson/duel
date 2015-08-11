@@ -13,27 +13,23 @@
     <span class="message">Email: <%= user.email %></span><br>
     <div style="overflow-x:scroll; height:350px;">
       <% questions.forEach(function(r) { %>
-          <h3 id="<%= r.question_id %>" style=" opacity: 0.9;">Question: <%= r.question_id %></h3>
-          <h4 style="color: #2c3e50;">Your Response: <%= r.response %></h4>
+          <h3 id="<%= r.question_id %>" style=" opacity: 0.9;">Question</h3>
+          <h4 style="color: #2c3e50;"><%= r.response %></h4>
       <% }); %>
       </div>
   </div>
 </div>
 </body>
-<script src="/account.js"></script>
+<script src="/questions.js"></script>
 <script type="text/javascript">
   $(window).load(function(){
     var userQuestions = '<%= qids%>';
     var qidArray = userQuestions.split(",");
     for (var i = 0; i < qidArray.length; i++) {
-      document.getElementById(qidArray[i]).innerHTML = questionContentArray[qidArray[i]];
+      document.getElementById(qidArray[i]).innerHTML = questions[qidArray[i]];
     };
     document.getElementById("account").innerHTML = "Questions";
     document.getElementById("account").href="/"; 
-    // var arr = <%= questions%>;
-    // arr.forEach(function(arg) {
-    //   console.log(arg.question_id);
-    // });
   });
 </script> 
 </html>

@@ -28,13 +28,14 @@
   $(window).load(function(){
     var ls = localStorage.getItem('rqt_user_id');
     var user_id = ls || '<%= rqt_user_id %>' || " "
-    selectRandomQuestion();
+    // selectRandomQuestion();
     if (user_id.length >= 5) {
       document.getElementById("account").innerHTML = "My Account";
       document.getElementById("account").href="/account?user_id="+user_id; 
       localStorage.setItem('rqt_user_id', user_id);
     }
   });
-</script> 
+</script>
+<script src="/questions.js"></script> 
 <script src="/selectQuestion.js"></script>
 </html>

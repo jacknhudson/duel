@@ -1,0 +1,8 @@
+f = open("questions/allQuestions.txt", 'r+')
+questions = f.read().split("\n")
+f = open("public/questions.js", 'r+')
+text = "questions = " + str(questions)
+f.seek(0)
+f.write(text)
+f.truncate()
+f.close()

@@ -41,6 +41,14 @@ Note: You may need to download the Postgres software which can be found at the r
 
 Reference: [https://devcenter.heroku.com/articles/heroku-postgresql#local-setup](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)
 
+## Adding Questions
+
+Add question to `questions/allQuestions.txt`. Run `python makeQuestions.py`.
+
+## Finding Questions By Index
+
+Run `python question.py <Question_Index>`.
+
 ## Documentation
 
 For more information about using Node.js on Heroku, see these Dev Center articles:
