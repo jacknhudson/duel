@@ -9,12 +9,14 @@
   <% include ../partials/nav.ejs %>
 <div class="jumbotron text-center">
   <div class="container">
-    <h2>My Responses</h2><hr style="width: 300px;">
+    <h2 style="padding-top: 0px;margin-top:0px;">My Responses</h2><hr style="width: 300px;">
     <span class="message">Email: <%= user.email %></span><br>
+    <div style="overflow-x:scroll; height:350px;">
       <% questions.forEach(function(r) { %>
           <h3 id="<%= r.question_id %>" style=" opacity: 0.9;">Question: <%= r.question_id %></h3>
           <h4 style="color: #2c3e50;">Your Response: <%= r.response %></h4>
       <% }); %>
+      </div>
   </div>
 </div>
 </body>

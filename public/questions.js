@@ -185,7 +185,7 @@ Who is your best friend, and why are they your best friend?
 What three things do you value in a person?
 Whats your favorite farmyard animal, and why?
 If you could choose one celebrity to be the father/mother of your child who would it be?
-What are your 3 favorite website?
+What are your 3 favorite websites?
 What mobile app do you use the most?
 What website do you use the most?
 Which fictional character do you wish was real, and why?

@@ -1,5 +1,6 @@
 @font-face {font-family:"Aller_Rg"; src: url("Aller_Rg.ttf");}
-body{font-family: 'Lato', sans-serif;}
+html{}
+body{font-family: 'Lato', sans-serif; background: #8e44ad;}
 ::-moz-selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
 ::selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
 ::-webkit-input-placeholder{color:rgba(44, 62, 80,0.6);}
@@ -7,7 +8,7 @@ body{font-family: 'Lato', sans-serif;}
 ::-moz-placeholder{color:rgba(44, 62, 80,0.6);}
 :-ms-input-placeholder{color:rgba(44, 62, 80,0.6);}
 .centered {text-align: center;}
-.jumbotron {background: #8e44ad; color: white; margin-bottom: 0px; height:100vh;}
+.jumbotron {background: #8e44ad; color: white; margin-bottom: 0px; height:90vh;}
   .jumbotron h2{padding-top: 40px;}
   .jumbotron p {text-align:right; color: rgba(44, 62, 80,0.6); max-width: 75%; margin: 1em auto 2em;}
   .navbar + .jumbotron {margin-top: -20px;}

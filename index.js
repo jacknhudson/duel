@@ -74,17 +74,17 @@ app.get('/account', function(req, res) {
   });
 });
 
-app.get('/db', function (req, res) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-    client.query('SELECT * FROM user', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); res.send("Error " + err); }
-      else
-       { res.render('pages/db', {results: result.rows} ); }
-    });
-  });
-})
+// app.get('/db', function (req, res) {
+//   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+//     client.query('SELECT * FROM user', function(err, result) {
+//       done();
+//       if (err)
+//        { console.error(err); res.send("Error " + err); }
+//       else
+//        { res.render('pages/db', {results: result.rows} ); }
+//     });
+//   });
+// })
 
 app.post('/submitResponse', function(req, res) {
   response = req.body.response.replace("\r", "").replace("\n", "");
