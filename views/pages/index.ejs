@@ -8,7 +8,7 @@
 
   <% include ../partials/nav.ejs %>
 <div class="jumbotron text-center">
-  <div class="container">
+  <div id="all" style="display: none;" class="container">
     <h2 id="question" index="">Question</h2>
     <form method="post" action="/submitResponse">
     <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
