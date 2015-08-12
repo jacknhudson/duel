@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $( "#all" ).fadeIn( "fast", function() {
+    // Animation complete
+  });
+});
+
 function isEmail (email) {
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
@@ -95,28 +101,3 @@ function shake (str, oncomplete, distance, time) {
         }
     }
 }
-
-// function keyhandler (argument) {
-//   var responseLength = document.getElementById("response").value.length
-//   if (event.which == 13) {submission();}
-//   if (responseLength == 0) {
-//     document.getElementById("directions").innerHTML = "Press Enter to skip"
-//   }
-//   else {
-//     document.getElementById("directions").innerHTML = "Press Enter to submit"
-//   }
-//   document.getElementById("charCount").innerHTML = responseLength;
-// }
-// function submission () {
-//   event.preventDefault();
-//   if (document.getElementById("response").value.length <= 1) {
-//     document.location = "/";
-//   }
-//   else {
-//     $("form").submit();
-//   }
-// }
-// function skip () {
-//   event.preventDefault();
-//   document.location = "/";
-// }

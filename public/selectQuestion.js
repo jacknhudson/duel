@@ -35,6 +35,9 @@ function submission () {
   else {
   	var ls = localStorage.getItem('rqt_user_id');
   	document.getElementById("user_id").setAttribute("value", ls);
-    $("form").submit();
+    $( "#all" ).fadeOut( "fast", function() {
+      // Animation complete
+      $("form").submit();
+    });
   }
 }
