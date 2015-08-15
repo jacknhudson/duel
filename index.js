@@ -96,6 +96,28 @@ app.post('/submitResponse', function(req, res) {
 	}
 });
 
+app.post('/submitFeedback', function(req, res) {
+  feedback = req.body.feedback.replace("\r", "").replace("\n", "");
+  user_id = req.body.user_id;
+  if (user_id.length <= 5) {
+  	res.render('pages/404');
+  }
+  else {
+	  // res.send('You sent the feedback "' + user_id + '".');
+	  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+	  	client.query('INSERT INTO feedback VALUES (\'' + user_id + '\', \'' + feedback + '\');', function(err1, result1) {
+	        done();
+	        if (err) { 
+	          res.send("This should not happen (T1): " + err);
+	        }
+	        else { 
+	          res.render('pages/feedback', {errorMsg: "Thanks for the feedback!"} );
+	        }
+	      });
+	  });
+	}
+});
+
 app.post('/signIn', function(req, res) {
   var email = req.body.email;
   var password = req.body.password;

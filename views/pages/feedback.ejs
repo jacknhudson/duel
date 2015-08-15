@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+<div class="jumbotron text-center">
+  <div id="all" style="display: none;" class="container">
+    <h2 id="question" index="">Feedback</h2>
+    <h3 id="errorMsg"></h3>
+    <form method="post" action="/submitFeedback">
+    <textarea id="response" name="feedback" maxlength="140" placeholder="Type Feedback..." onkeyup="keyhandler();" autofocus></textarea>
+    <input type="hidden" id="user_id" name="user_id" value="-1">
+    </form>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+      <p style="text-align: left"><span id="charCount">0</span>/250</p>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <p id="directions">Press Enter to skip</p>
+    </div>
+  </div>
+</div>
+</body>
+<!-- On-pageload script added in line for optimization -->
+<script type="text/javascript">
+  $(window).load(function(){
+    var ls = localStorage.getItem('rqt_user_id');
+    var user_id = ls || '<%= rqt_user_id %>' || " "
+    if (user_id.length >= 5) {
+      document.getElementById("account").innerHTML = "My Account";
+      document.getElementById("account").href="/account?user_id="+user_id; 
+      localStorage.setItem('rqt_user_id', user_id);
+    }
+  });
+</script>
+<script src="/feedback.js"></script>
+</html>
