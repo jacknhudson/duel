@@ -24,11 +24,11 @@
   </div>
 </div>
 </body>
+<!-- On-pageload script added in line for optimization -->
 <script type="text/javascript">
   $(window).load(function(){
     var ls = localStorage.getItem('rqt_user_id');
     var user_id = ls || '<%= rqt_user_id %>' || " "
-    // selectRandomQuestion();
     if (user_id.length >= 5) {
       document.getElementById("account").innerHTML = "My Account";
       document.getElementById("account").href="/account?user_id="+user_id; 
@@ -36,6 +36,6 @@
     }
   });
 </script>
-<script src="/questions.js"></script> 
+<!-- <script src="/scripts/questions.js"></script>  -->
 <script src="/selectQuestion.js"></script>
 </html>
