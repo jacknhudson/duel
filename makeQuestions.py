@@ -1,6 +1,6 @@
 f = open("questions/allQuestions.txt", 'r+')
 questions = f.read().replace("'", "*****").split("\n")
-f = open("public/questions.js", 'r+')
+f = open("public/scripts/questions.js", 'r+')
 text = "questions = " + str(questions).replace("'", "\"").replace("*****", "'")
 f.seek(0)
 f.write(text)
