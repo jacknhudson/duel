@@ -24,7 +24,7 @@
 <!-- On-pageload script added in line for optimization -->
 <script type="text/javascript">
   $(window).load(function(){
-    var userQuestions = '<%= qids%>';
+    var userQuestions = '<%= qids %>';
     var qidArray = userQuestions.split(",");
     for (var i = 0; i < qidArray.length; i++) {
       document.getElementById(qidArray[i]).innerHTML = questions[qidArray[i]];

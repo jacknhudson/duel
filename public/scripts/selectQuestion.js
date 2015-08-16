@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $.getScript('./questions.js', function()
+  $.getScript('./scripts/questions.js', function()
   {
    var randomIndex = Math.floor(Math.random() * questions.length);
     var selectedQuestion = questions[randomIndex];
@@ -27,6 +27,7 @@ function keyhandler (argument) {
       if (responseLength <= 1) {
         $( "#all" ).fadeOut( "fast", function() {
           // Animation complete
+          var ls = localStorage.getItem('rqt_user_id');
           if (ls == null) {
             // User isn't signed in. Go to register page
             document.location = "/register";

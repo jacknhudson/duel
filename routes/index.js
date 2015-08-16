@@ -1,7 +1,3 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-
 var pg = require('pg');
 
 // Nodejs encryption with CTR
@@ -25,27 +21,20 @@ function decrypt(text){
   return dec;
 }
 
-//Note that in version 4 of express, express.bodyParser() was
-//deprecated in favor of a separate 'body-parser' module.
-app.use(bodyParser.urlencoded({ extended: true }));
+// Routes
+exports.index = function (req, res) {
+	res.render('pages/index', {rqt_user_id: ""});
+};
 
-app.set('port', (process.env.PORT || 5000));
+exports.register = function (req, res) {
+	res.render('pages/register', {errorMsg: ""} );
+};
 
-app.use(express.static(__dirname + '/public'));
+exports.feedback = function (req, res) {
+	res.render('pages/feedback', {errorMsg: ""} );
+};
 
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/', function(req, res) {
-  res.render('pages/index', {rqt_user_id: ""});
-});
-
-app.get('/register', function(req, res) {
-  res.render('pages/register', {errorMsg: ""} );
-});
-
-app.get('/account', function(req, res) {
+exports.account = function (req, res) {
   var user_id = req.query.user_id;
   if (user_id == null) {
   	res.render('pages/404');
@@ -71,9 +60,9 @@ app.get('/account', function(req, res) {
       }
     });
   });
-});
+};
 
-app.post('/submitResponse', function(req, res) {
+exports.submitResponse = function (req, res) {
   response = req.body.response.replace("\r", "").replace("\n", "");
   question_id = req.body.question_id;
   user_id = req.body.user_id;
@@ -94,9 +83,9 @@ app.post('/submitResponse', function(req, res) {
 	      });
 	  });
 	}
-});
+};
 
-app.post('/submitFeedback', function(req, res) {
+exports.submitFeedback = function (req, res) {
   feedback = req.body.feedback.replace("\r", "").replace("\n", "");
   user_id = req.body.user_id;
   if (user_id.length <= 5) {
@@ -116,9 +105,9 @@ app.post('/submitFeedback', function(req, res) {
 	      });
 	  });
 	}
-});
+};
 
-app.post('/signIn', function(req, res) {
+exports.signIn = function (req, res) {
   var email = req.body.email;
   var password = req.body.password;
   var encryptedPassword = encrypt(password)
@@ -173,9 +162,9 @@ app.post('/signIn', function(req, res) {
       }
     });
   });
-});
+};
 
-app.post('/please_register', function(req, res) {
+exports.please_register = function (req, res) {
   var email = req.body.email;
   var password = req.body.password;
   var encryptedPassword = encrypt(password)
@@ -244,14 +233,20 @@ app.post('/please_register', function(req, res) {
       }
     });
   });
-});
+};
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+exports.feedback = function (req, res) {
+	res.render('pages/feedback', {errorMsg: ""} );
+};
 
-//The 404 Route
-app.get('*', function(req, res){
+exports.fourOFour = function(req, res) {
+  res.status(400);
   res.render('pages/404');
-  // res.send('what???', 404);
-});
+  // res.render('pages/404', {message: "We couldn't find what you were looking for."});
+};
+
+exports.fiveHundred = function(error, req, res, next) {
+  res.status(500);
+  res.render('pages/404');
+  // res.render('pages/404', {message: "We encountered the following error: " + error});
+};

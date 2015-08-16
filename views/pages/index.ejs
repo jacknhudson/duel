@@ -10,6 +10,7 @@
 <div class="jumbotron text-center">
   <div id="all" style="display: none;" class="container">
     <h2 id="question" index="">Question</h2>
+    <h4 id="errorMsg"></h4>
     <form method="post" action="/submitResponse">
     <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
     <input type="hidden" id="question_id" name="question_id" value="-1">
@@ -36,6 +37,6 @@
     }
   });
 </script>
-<!-- <script src="/scripts/questions.js"></script>  -->
-<script src="/selectQuestion.js"></script>
+<script src="/scripts/questions.js"></script> 
+<script src="/scripts/selectQuestion.js"></script>
 </html>
