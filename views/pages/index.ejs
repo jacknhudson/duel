@@ -12,12 +12,12 @@
     <h2 id="question" index="">Question</h2>
     <h4 id="errorMsg"></h4>
     <form method="post" action="/submitResponse">
-    <textarea id="response" name="response" maxlength="140" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
+    <textarea id="response" name="response" maxlength="300" placeholder="Type Response..." onkeyup="keyhandler();" autofocus></textarea>
     <input type="hidden" id="question_id" name="question_id" value="-1">
     <input type="hidden" id="user_id" name="user_id" value="-1">
     </form>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-      <p style="text-align: left"><span id="charCount">0</span>/140</p>
+      <p style="text-align: left"><span id="charCount">0</span>/250</p>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
       <p id="directions">Press Enter to skip</p>
@@ -32,7 +32,8 @@
     var user_id = ls || '<%= rqt_user_id %>' || " "
     if (user_id.length >= 5) {
       document.getElementById("account").innerHTML = "My Account";
-      document.getElementById("account").href="/account?user_id="+user_id; 
+      document.getElementById("account").href="/account?user_id="+user_id;
+      document.getElementById("feedback").style.visibility="visible";
       localStorage.setItem('rqt_user_id', user_id);
     }
   });

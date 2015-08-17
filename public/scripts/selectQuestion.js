@@ -12,11 +12,11 @@ $(document).ready(function(){
 });
 
 function keyhandler (argument) {
-  var charLimit = 140;
+  var charLimit = 250;
   var responseLength = document.getElementById("response").value.length;
   // If over charLimit
   if (responseLength > charLimit) {
-    document.getElementById("errorMsg").innerHTML = "Uh oh! Your response is over the 140 character limit.";
+    document.getElementById("errorMsg").innerHTML = "Uh oh! Your response is over the 250 character limit.";
     document.getElementById("directions").innerHTML = "";
   }
   else {
@@ -56,19 +56,6 @@ function keyhandler (argument) {
   document.getElementById("charCount").innerHTML = responseLength;
 }
 
-// function keyhandler (argument) {
-//   var responseLength = document.getElementById("response").value.length
-//   if (event.which == 13) {submission();}
-//   else {
-//     if (responseLength == 0 ) {
-//       document.getElementById("directions").innerHTML = "Press Enter to skip"
-//     }
-//     else {
-//       document.getElementById("directions").innerHTML = "Press Enter to submit"
-//     }
-//     document.getElementById("charCount").innerHTML = responseLength;
-//   }
-// }
 function submission () {
   // event.preventDefault();
   var ls = localStorage.getItem('rqt_user_id');

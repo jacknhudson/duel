@@ -6,13 +6,13 @@
 
 <body>
 
-  <% include ../partials/nav.ejs %>
+  <% include ../partials/nav-feedback.ejs %>
 <div class="jumbotron text-center">
   <div id="all" style="display: none;" class="container">
     <h2 id="question" index="">Feedback</h2>
-    <h3 id="errorMsg"></h3>
+    <h4 id="errorMsg"></h4>
     <form method="post" action="/submitFeedback">
-    <textarea id="response" name="feedback" maxlength="140" placeholder="Type Feedback..." onkeyup="keyhandler();" autofocus></textarea>
+    <textarea id="feedback" name="feedback" maxlength="300" placeholder="Type Feedback..." onkeyup="keyhandler();" autofocus></textarea>
     <input type="hidden" id="user_id" name="user_id" value="-1">
     </form>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -28,7 +28,7 @@
 <script type="text/javascript">
   $(window).load(function(){
     var ls = localStorage.getItem('rqt_user_id');
-    var user_id = ls || '<%= rqt_user_id %>' || " "
+    var user_id = ls
     if (user_id.length >= 5) {
       document.getElementById("account").innerHTML = "My Account";
       document.getElementById("account").href="/account?user_id="+user_id; 
@@ -36,5 +36,5 @@
     }
   });
 </script>
-<script src="/feedback.js"></script>
+<script src="/scripts/feedback.js"></script>
 </html>

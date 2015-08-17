@@ -31,7 +31,7 @@ exports.register = function (req, res) {
 };
 
 exports.feedback = function (req, res) {
-	res.render('pages/feedback', {errorMsg: ""} );
+	res.render('pages/feedback', {errorMsg: "", rqt_user_id: ""} );
 };
 
 exports.account = function (req, res) {
