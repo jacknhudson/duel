@@ -26,6 +26,10 @@ exports.index = function (req, res) {
 	res.render('pages/index', {rqt_user_id: ""});
 };
 
+exports.about = function (req, res) {
+	res.render('pages/about', {rqt_user_id: ""});
+};
+
 exports.register = function (req, res) {
 	res.render('pages/register', {errorMsg: ""} );
 };
@@ -34,10 +38,14 @@ exports.feedback = function (req, res) {
 	res.render('pages/feedback', {errorMsg: "", rqt_user_id: ""} );
 };
 
+exports.feedback_submitted = function (req, res) {
+	res.render('pages/feedback_submitted', {errorMsg: "Thanks for the feedback!", rqt_user_id: ""} );
+};
+
 exports.account = function (req, res) {
   var user_id = req.query.user_id;
   if (user_id == null) {
-  	res.render('pages/404');
+  	res.redirect("/fourOFour");
   }
   pg.connect(process.env.DATABASE_URL, function(err, client, done) {
     client.query('SELECT * FROM responses WHERE user_id=\'' + user_id + '\';', function(err, result) {
@@ -89,18 +97,22 @@ exports.submitFeedback = function (req, res) {
   feedback = req.body.feedback.replace("\r", "").replace("\n", "");
   user_id = req.body.user_id;
   if (user_id.length <= 5) {
-  	res.render('pages/404');
+  	res.redirect("/fourOFour");
+  }
+  else if (feedback.length <= 3) {
+  	res.redirect("/feedback_submitted");
   }
   else {
 	  // res.send('You sent the feedback "' + user_id + '".');
 	  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-	  	client.query('INSERT INTO feedback VALUES (\'' + user_id + '\', \'' + feedback + '\');', function(err1, result1) {
+	  	client.query('INSERT INTO feedback VALUES (\'' + user_id + '\', \'' + feedback + '\', \''+ Date() +'\');', function(err1, result1) {
 	        done();
 	        if (err) { 
 	          res.send("This should not happen (T1): " + err);
 	        }
 	        else { 
-	          res.render('pages/feedback', {errorMsg: "Thanks for the feedback!"} );
+	        	res.redirect("/feedback_submitted");
+	          // res.render('pages/feedback', {errorMsg: "Thanks for the feedback!"} );
 	        }
 	      });
 	  });

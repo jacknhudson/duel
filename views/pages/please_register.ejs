@@ -8,12 +8,12 @@
 
   <% include ../partials/nav-register.ejs %>
 <div class="jumbotron text-center">
-  <div class="container" id="all" style="display: none;">
+  <div class="container" id="all" class="hideme">
     <h2>Register</h2>
     <% if (errorMsg) { %>
     <span class="message"><%= errorMsg  %></span>
     <% } else { %>
-    <span class="message" style="color: #ecf0f1;">Please sign in so we can store your responses on your account.</span>
+    <span class="message instructions">Please sign in so we can store your responses on your account.</span>
     <% }; %>
     <br><br>
     <form method="post" action="/please_register">
@@ -21,13 +21,13 @@
       <input type="email" id="email" name="email" maxlength="150" placeholder="Email Address" class="centered" onkeydown="validateEmail(this);" autofocus>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <input type="password" id="password" name="password" maxlength="50" class="centered" onkeydown="validatePassword(this);" placeholder="Password (min 5 chars)">
+      <input type="password" id="password" name="password" maxlength="50" class="centered width-adjustment" onkeydown="validatePassword(this);" placeholder="Password (min 5 chars)">
     </div>
     <input type="hidden" id="question_id" name="question_id" value="<%= question_id  %>">
     <input type="hidden" id="response" name="response" value="<%= response  %>">
     </form>
     <br><br>
-    <p id="directions">Press Enter to submit</p>
+    <p class="right" id="directions">Press Enter to submit</p>
   </div>
 </div>
 </body>

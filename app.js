@@ -23,6 +23,7 @@ app.set('view engine', 'ejs');
 
 // Questions
 app.get('/', routes.index);
+app.get('/about', routes.about);
 app.post('/submitResponse', routes.submitResponse);
 
 // Account
@@ -34,6 +35,7 @@ app.post('/please_register', routes.please_register);
 // feedback
 app.get('/feedback', routes.feedback);
 app.post('/submitFeedback', routes.submitFeedback);
+app.get('/feedback_submitted', routes.feedback_submitted);
 
 // Handle 404
 app.use(routes.fourOFour);

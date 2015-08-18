@@ -32,6 +32,7 @@ psql <Username>
 (In psql shell:) 
 create table responses (user_id text, question_id integer, response text);
 create table users (id text, email text, encrypted_password text);
+create table feedback (user_id text, feedback text, timestamp text);
 \q
 ```
 

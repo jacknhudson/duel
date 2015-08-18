@@ -1,16 +1,3 @@
-$(document).ready(function(){
-  $.getScript('./scripts/questions.js', function()
-  {
-   var randomIndex = Math.floor(Math.random() * questions.length);
-    var selectedQuestion = questions[randomIndex];
-    document.getElementById("question").innerHTML = selectedQuestion;
-    document.getElementById("question_id").setAttribute("value",randomIndex.toString());
-    $( "#all" ).fadeIn( "fast", function() {
-    // Animation complete
-  });
-  });
-});
-
 function keyhandler (argument) {
   var charLimit = 250;
   var responseLength = document.getElementById("response").value.length;

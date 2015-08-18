@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav-about.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h2 id="question" index="">About</h2>
+    <h3 class="about-description">Whether you're by yourself, with your friends, or with your family, <span class="logo-style">Rocket</span> is an enjoyable tool for discovery and conversation. With a collection of over 300 questions, <span class="logo-style">Rocket</span> invites you to explore the most fascinating subjects, from <i>"What has been the happiest moment of your life?"</i> to <i>"You are placed onto a stage in front of thousands of people. How would you entertain them for an hour?"</i> Get ready to have your opinions challenged and your and to <i>really</i> get to know yourself!</h3>
+  </div>
+</div>
+</body>
+<!-- On-pageload script added in line for optimization -->
+<script type="text/javascript">
+  $(window).load(function(){
+    var ls = localStorage.getItem('rqt_user_id');
+    var user_id = ls || '<%= rqt_user_id %>' || " "
+    if (user_id.length >= 5) {
+      document.getElementById("account").innerHTML = "My Account";
+      document.getElementById("account").href="/account?user_id="+user_id;
+      localStorage.setItem('rqt_user_id', user_id);
+    }
+  });
+</script>
+</html>
