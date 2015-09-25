@@ -1,6 +1,6 @@
 @font-face {font-family:"Aller_Rg"; src: url("Aller_Rg.ttf");}
 html{}
-body{font-family: 'Lato', sans-serif; background: #8e44ad;}
+body{font-family: 'Lato', sans-serif; background: #ecf0f1;}
 
 ::-moz-selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
 ::selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
@@ -15,7 +15,7 @@ body{font-family: 'Lato', sans-serif; background: #8e44ad;}
 
 .dark-color{color: #2c3e50;}
 .hideme{display: none;}
-.jumbotron {background: #8e44ad; color: white; margin-bottom: 0px; height:90vh;}
+.jumbotron {background: #ecf0f1; color: #2c3e50; margin-bottom: 0px; padding-top: 25px; height:90vh;}
   .jumbotron h2{padding-top: 40px;}
   .jumbotron p {color: rgba(44, 62, 80, 0.6); max-width: 75%; margin: 1em auto 2em;}
   .navbar + .jumbotron {margin-top: -20px;}
@@ -34,8 +34,8 @@ body{font-family: 'Lato', sans-serif; background: #8e44ad;}
 .about-description {line-height: 125%;opacity:0.9;}
 
 /*Navigation Bar*/
-.navbar{background: #8e44ad; font-size: 25px; font-family: 'Aller_Rg', sans-serif;}
-.navbar a{color: #ecf0f1; background: #8e44ad; font-size: 20px;}
+.navbar{background: #ecf0f1; font-size: 25px; font-family: 'Aller_Rg', sans-serif;}
+.navbar a{color: #2c3e50; background: #ecf0f1; font-size: 20px;}
 .navbar a:focus, .navbar a:hover{text-decoration: none;}
 .navbar .logo {margin-top: 10px; padding-left: 20px;}
 .navbar .logo img{height: 25px; margin-top: -5px;}
