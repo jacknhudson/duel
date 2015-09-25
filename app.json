@@ -1,7 +1,7 @@
 {
-  "name": "Rocket",
+  "name": "Duel",
   "description": "A barebones Node.js app using Express 4",
-  "repository": "http://rqt.herokuapp.com/",
+  "repository": "http://fencingduel.herokuapp.com/",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["node", "express", "static"]
 }
