@@ -6,9 +6,10 @@
 
 <body>
 <div class="jumbotron text-center">
+  <h1 style="margin-top:0px; font-size: 50px;" size="50"><input type="text" placeholder="Competition Name" value="Ivy League Championships"></h1>
   <div class="container">
     <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <img src="" height="100" id="logo1">
       <h3>
       <select id="1" onchange="switchImg(this.value, this.id);">
@@ -28,9 +29,14 @@
       <h1 id="s1" style="font-size: 100px">0</h1>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 centered">
+      <br>
+      <img src="/Ivy_League_logo.png" height="100">
+      <a onclick="reset();" style="cursor: pointer; opacity: .8;">Reset</a>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 centered">
       <h1 id="s2" style="font-size: 100px">0</h1>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <img src="" height="100" id="logo2">
       <h3>
       <select id="2" onchange="switchImg(this.value, this.id);">
@@ -50,7 +56,7 @@
     <br>
     <div class="row">
     <h2 style="padding:0px;margin-bottom:0px; margin-top:0px;text-decoration: underline;">Epee</h2>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="e1s">0</h1>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 centered">
@@ -60,6 +66,9 @@
       <button class="btn btn-success btn-down" element="e1"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 centered">
+      <h1><span id="es">0</span>/9</h1>
+    </div>
      <div class="col-lg-2 col-md-2 col-sm-2 centered">
       <br>
       <h3>
@@ -67,14 +76,14 @@
       <button class="btn btn-success btn-down" element="e2"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="e2s">0</h1>
     </div>
     </div>
     <br>
     <div class="row">
     <h2 style="padding:0px;margin-bottom:0px; margin-top:0px;text-decoration: underline;">Foil</h2>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="f1s">0</h1>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 centered">
@@ -84,6 +93,9 @@
       <button class="btn btn-success btn-down" element="f1"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 centered">
+      <h1><span id="fs">0</span>/9</h1>
+    </div>
      <div class="col-lg-2 col-md-2 col-sm-2 centered">
       <br>
       <h3>
@@ -91,14 +103,14 @@
       <button class="btn btn-success btn-down" element="f2"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="f2s">0</h1>
     </div>
     </div>
     <br>
     <div class="row">
     <h2 style="padding:0px;margin-bottom:0px; margin-top:0px;text-decoration: underline;">Saber</h2>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="s1s">0</h1>
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 centered">
@@ -108,6 +120,9 @@
       <button class="btn btn-success btn-down" element="s1"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 centered">
+      <h1><span id="ss">0</span>/9</h1>
+    </div>
      <div class="col-lg-2 col-md-2 col-sm-2 centered">
       <br>
       <h3>
@@ -115,7 +130,7 @@
       <button class="btn btn-success btn-down" element="s2"><img src="/blue-down.png" height="30"></button>
       </h3>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 centered">
+    <div class="col-lg-3 col-md-3 col-sm-3 centered">
       <h1 id="s2s">0</h1>
     </div>
     </div>
@@ -128,14 +143,27 @@
     e.preventDefault();
     var scoreId = $(this).attr('element') + "s"
     var score = parseInt(document.getElementById(scoreId).innerHTML);
-    var id1 = scoreId.charAt(0) + "1s";
-    var id2 = scoreId.charAt(0) + "2s";
+    var firstChar = scoreId.charAt(0);
+    var secondChar = scoreId.charAt(1);
+    var id1 = firstChar + "1s";
+    var id2 = firstChar + "2s";
     var score1 = parseInt(document.getElementById(id1).innerHTML);
     var score2 = parseInt(document.getElementById(id2).innerHTML);
     var scoreSum = score1 + score2;
     if (scoreSum < 9) {
       document.getElementById(scoreId).innerHTML = score + 1;
-      document.getElementById("s"+scoreId.charAt(1)).innerHTML = parseInt(document.getElementById("s"+scoreId.charAt(1)).innerHTML) + 1;
+      document.getElementById(firstChar + "s").innerHTML = parseInt(document.getElementById(firstChar + "s").innerHTML) + 1;
+      var newScore = parseInt(document.getElementById("s"+secondChar).innerHTML) + 1;
+      document.getElementById("s"+secondChar).innerHTML = parseInt(document.getElementById("s"+scoreId.charAt(1)).innerHTML) + 1;
+      if (newScore == 14) {
+        document.getElementById("s"+secondChar).style.color = "#27ae60";
+        if (secondChar == 1) {
+          document.getElementById("s2").style.color = "#c0392b";
+        }
+        else {
+          document.getElementById("s1").style.color = "#c0392b";
+        }
+      }
       if (scoreSum + 1 == 9) {
         score1 = parseInt(document.getElementById(id1).innerHTML);
         score2 = parseInt(document.getElementById(id2).innerHTML);
@@ -159,12 +187,14 @@
     e.preventDefault();
     var scoreId = $(this).attr('element') + "s";
     var score = parseInt(document.getElementById(scoreId).innerHTML);
+    var firstChar = scoreId.charAt(0);
     if (score > 0) {
       document.getElementById(scoreId).innerHTML = score - 1;
+      document.getElementById(firstChar + "s").innerHTML = parseInt(document.getElementById(firstChar + "s").innerHTML) - 1;
       document.getElementById("s"+scoreId.charAt(1)).innerHTML = parseInt(document.getElementById("s"+scoreId.charAt(1)).innerHTML) - 1;
     }
-    var id1 = scoreId.charAt(0) + "1s";
-    var id2 = scoreId.charAt(0) + "2s";
+    var id1 = firstChar + "1s";
+    var id2 = firstChar + "2s";
     var score1 = parseInt(document.getElementById(id1).innerHTML);
     var score2 = parseInt(document.getElementById(id2).innerHTML);
     var scoreSum = score1 + score2;
@@ -182,6 +212,10 @@
       document.getElementById(id2).style.color = "#2c3e50";
       document.getElementById(id1).style.color = "#2c3e50";
     }
+    if ((parseInt(document.getElementById("s1").innerHTML) < 14) && (parseInt(document.getElementById("s2").innerHTML) < 14)) {
+        document.getElementById("s1").style.color = "#2c3e50";
+        document.getElementById("s2").style.color = "#2c3e50";
+      }
   });
 
 function switchImg(key, selectId) {
@@ -198,6 +232,35 @@ function switchImg(key, selectId) {
   };
   var imgSrc = srcArray[key];
   document.getElementById("logo"+selectId).src = imgSrc;
+}
+function reset() {
+  document.getElementById("s1").innerHTML = '0';
+  document.getElementById("s2").innerHTML = '0';
+  document.getElementById("s1").style.color = "#2c3e50";
+  document.getElementById("s2").style.color = "#2c3e50";
+
+  document.getElementById("e1s").innerHTML = '0';
+  document.getElementById("es").innerHTML = '0';
+  document.getElementById("e2s").innerHTML = '0';
+  document.getElementById("e1s").style.color = "#2c3e50";
+  document.getElementById("e2s").style.color = "#2c3e50";
+
+  document.getElementById("f1s").innerHTML = '0';
+  document.getElementById("fs").innerHTML = '0';
+  document.getElementById("f2s").innerHTML = '0';
+  document.getElementById("f1s").style.color = "#2c3e50";
+  document.getElementById("f2s").style.color = "#2c3e50";
+
+  document.getElementById("s1s").innerHTML = '0';
+  document.getElementById("ss").innerHTML = '0';
+  document.getElementById("s2s").innerHTML = '0';
+  document.getElementById("s1s").style.color = "#2c3e50";
+  document.getElementById("s2s").style.color = "#2c3e50";
+
+  document.getElementById("1").value = "choose"
+  document.getElementById("logo1").src = "/transparent.png";
+  document.getElementById("2").value = "choose"
+  document.getElementById("logo2").src = "/transparent.png";
 }
 </script>
 </html>

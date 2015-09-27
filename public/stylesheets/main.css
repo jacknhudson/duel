@@ -2,8 +2,8 @@
 html{}
 body{font-family: 'Lato', sans-serif; background: #ecf0f1;}
 
-::-moz-selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
-::selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
+/*::-moz-selection{color:#2c3e50; text-shadow:none; background-color: transparent;}
+::selection{color:#2c3e50; text-shadow:none; background-color: transparent;}*/
 ::-webkit-input-placeholder{color:rgba(44, 62, 80,0.6);}
 :-moz-placeholder{color:rgba(44, 62, 80,0.6);}
 ::-moz-placeholder{color:rgba(44, 62, 80,0.6);}
@@ -21,7 +21,7 @@ body{font-family: 'Lato', sans-serif; background: #ecf0f1;}
   .navbar + .jumbotron {margin-top: -20px;}
   .jumbotron a{font-size: 21px; color: #2c3e50;}
   .jumbotron a:focus, .jumbotron a:hover{text-decoration: none;}
-  .jumbotron input{color: #2c3e50; background-color: transparent; border: none; outline: none; font-size: 20pt;}
+  .jumbotron input{color: #2c3e50; background-color: transparent; border: none; outline: none; font-size: 45pt;width: 700px;}
   .jumbotron textarea{height: 30vh; width: 75vw; color: #d9ccee; background-color: transparent; border: none; outline: none; font-size: 20pt; resize: none;}
 .logo-style {font-family: 'Aller_Rg', sans-serif;}
 .width-adjustment{width: 300px;}
